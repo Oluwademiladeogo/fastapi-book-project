@@ -1,7 +1,8 @@
 services:
-  app:
-    build: .
-    container_name: fastapiproject
+  web:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: fastapi
     ports:
-      - "80:80"
-    restart: always
+      - "8000:8000"
